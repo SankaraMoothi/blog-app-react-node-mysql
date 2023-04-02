@@ -17,7 +17,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts/${id}`);
+        const res = await axios.get(`https://blog-app-node-mysql-backend-production.up.railway.app/api/posts/${id}`);
         setpost(res.data);
       } catch (error) {
         console.log(error);
@@ -27,7 +27,7 @@ const Single = () => {
   }, []);
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${id}`);
+      await axios.delete(`https://blog-app-node-mysql-backend-production.up.railway.app/api/posts/${id}`);
       navigate("/");
     } catch (error) {
       console.log(error);
