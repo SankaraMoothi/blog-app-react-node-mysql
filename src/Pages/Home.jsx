@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts${cat}`);
+        const res = await axios.get(`https://blog-app-node-mysql-backend-production.up.railway.app/api/posts${cat}`);
         setposts(res.data);
       } catch (error) {
         console.log(error);
