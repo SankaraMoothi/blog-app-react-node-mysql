@@ -7,7 +7,7 @@ const Menu = ({ cat }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts/?cat=${cat}`);
+        const res = await axios.get(`https://blog-app-node-mysql-backend-production.up.railway.app/api/posts/?cat=${cat}`);
         setposts(res.data);
       } catch (error) {
         console.log(error);
